@@ -64,7 +64,6 @@
       margin-bottom: 30px;
     }
 
-    /* Buttons */
     .button-container {
       display: flex;
       gap: 15px;
@@ -94,6 +93,28 @@
     button:hover {
       opacity: 0.8;
     }
+
+    /* Device Images */
+    .devices {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .device {
+      width: 100px;
+      height: 180px;
+      background-color: #e0e0e0;
+      border-radius: 15px;
+      border: 3px solid #999;
+    }
+
+    .device.laptop {
+      width: 200px;
+      height: 120px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
@@ -120,6 +141,14 @@
     </div>
 
     <p>Create native apps for Android, iOS, and more using React.</p>
+
+    <!-- Device Mockups -->
+    <div class="devices">
+      <div class="device laptop"></div>
+      <div class="device"></div>
+      <div class="device"></div>
+      <div class="device laptop"></div>
+    </div>
   </div>
 
   <!-- Footer -->

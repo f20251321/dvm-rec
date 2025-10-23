@@ -94,7 +94,6 @@
       opacity: 0.8;
     }
 
-    /* Device Images */
     .devices {
       display: flex;
       justify-content: center;
@@ -142,13 +141,69 @@
 
     <p>Create native apps for Android, iOS, and more using React.</p>
 
-    <!-- Device Mockups -->
     <div class="devices">
       <div class="device laptop"></div>
       <div class="device"></div>
       <div class="device"></div>
       <div class="device laptop"></div>
     </div>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="content">
+    
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-text">
+        <h2>Create native apps for Android, iOS, and more</h2>
+        <p>React Native combines the best parts of native development with React, a best-in-class JavaScript library.</p>
+        
+        <div class="code-box">
+import React from 'react';
+import { Button, View } from 'react-native';
+
+const App = () => {
+  return (
+    &lt;View&gt;
+      &lt;Button title="Click me" /&gt;
+    &lt;/View&gt;
+  );
+};
+        </div>
+        
+        <p style="margin-top: 15px; font-size: 14px;">Written in JavaScript—rendered with native code</p>
+      </div>
+      
+      <div class="section-image">
+        <div class="phone-mockup"></div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-image">
+        <div class="phone-mockup"></div>
+      </div>
+      
+      <div class="section-text">
+        <h2>Use JavaScript libraries in your app</h2>
+        <p>You can bring your favorite JavaScript libraries to build powerful experiences.</p>
+        
+        <div class="code-box">
+import * as React from 'react';
+import { Button, View } from 'react-native';
+
+const App = () => (
+  &lt;View&gt;
+    &lt;Button title="Click me" /&gt;
+  &lt;/View&gt;
+);
+        </div>
+        
+        <p style="margin-top: 15px; font-size: 14px;">Bring in libraries, animations, and API integrations</p>
+      </div>
+    </div>
+
   </div>
 
   <!-- Footer -->

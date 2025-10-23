@@ -96,7 +96,7 @@
 
     .devices {
       display: flex;
-      justify-content: center;
+            justify-content: center;
       gap: 30px;
       margin-top: 40px;
     }
@@ -113,6 +113,61 @@
       width: 200px;
       height: 120px;
       border-radius: 10px;
+    }
+
+    /* Content Section */
+    .content {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 80px;
+      align-items: center;
+    }
+
+    .section-text {
+      flex: 1;
+    }
+
+    .section-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .code-box {
+      background-color: #1a1a1a;
+      color: #61dafb;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 14px;
+      overflow-x: auto;
+    }
+
+    .phone-mockup {
+      width: 200px;
+      height: 400px;
+      background-color: white;
+      border-radius: 30px;
+      border: 10px solid #333;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -204,6 +259,28 @@ const App = () => (
       </div>
     </div>
 
+  </div>
+
+  <!-- Features Section -->
+  <div class="features">
+    <h2>Why React Native?</h2>
+    
+    <div class="feature-cards">
+      <div class="card">
+        <h3>Fast Refresh</h3>
+        <p>See your changes instantly in the app while developing.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Truly Native</h3>
+        <p>Access to native platform capabilities with a modern JavaScript API.</p>
+      </div>
+      
+      <div class="card">
+        <h3>One Codebase</h3>
+        <p>Build for multiple platforms with a single shared codebase.</p>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->

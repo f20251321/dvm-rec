@@ -9,13 +9,13 @@
 
     body {
       font-family: 'Inter', Arial, sans-serif;
-      background-color: #0b0b0b;
-      color: #e0e0e0;
+      background-color: #ffffff;
+      color: #1c1e21;
       line-height: 1.6;
     }
 
     nav {
-      background: rgba(20, 20, 20, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       padding: 20px 60px;
       display: flex;
@@ -24,7 +24,8 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      border-bottom: 1px solid #1f1f1f;
+      border-bottom: 1px solid #e8e8e8;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     .logo {
@@ -40,10 +41,11 @@
     }
 
     .nav-links a {
-      color: #e0e0e0;
+      color: #1c1e21;
       text-decoration: none;
       font-size: 16px;
       transition: color 0.3s;
+      font-weight: 500;
     }
 
     .nav-links a:hover {
@@ -52,20 +54,20 @@
 
     .hero {
       text-align: center;
-      padding: 100px 20px;
-      background: radial-gradient(circle at 30% 30%, #111 0%, #0b0b0b 100%);
+      padding: 100px 20px 80px;
+      background: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
     }
 
     .hero h1 {
       font-size: 56px;
       margin-bottom: 20px;
       font-weight: 800;
-      color: white;
+      color: #1c1e21;
     }
 
     .hero p {
       font-size: 20px;
-      color: #a0a0a0;
+      color: #5c5c5c;
       margin-bottom: 30px;
     }
 
@@ -83,12 +85,12 @@
       cursor: pointer;
       border: none;
       transition: all 0.3s ease;
+      font-weight: 600;
     }
 
     .btn-primary {
       background: #61dafb;
       color: #000;
-      font-weight: bold;
     }
 
     .btn-secondary {
@@ -99,7 +101,7 @@
 
     button:hover {
       transform: translateY(-2px);
-      opacity: 0.9;
+      box-shadow: 0 4px 12px rgba(97, 218, 251, 0.3);
     }
 
     .devices {
@@ -113,9 +115,9 @@
     .device {
       width: 100px;
       height: 180px;
-      background-color: #111;
+      background-color: #f0f0f0;
       border-radius: 20px;
-      border: 2px solid #333;
+      border: 2px solid #d0d0d0;
     }
 
     .device.laptop {
@@ -124,9 +126,54 @@
       border-radius: 12px;
     }
 
+    .hero-section {
+      padding: 100px 20px;
+      background: #ffffff;
+    }
+
+    .hero-section h1 {
+      font-size: 2.8em;
+      color: #1c1e21;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1.15em;
+      color: #5c5c5c;
+      max-width: 800px;
+      line-height: 1.7;
+    }
+
+    .visual-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .code-header {
+      background: #2d2d2d;
+      color: #fff;
+      padding: 10px 16px;
+      font-size: 0.9em;
+      border-radius: 8px 8px 0 0;
+      font-family: 'Courier New', monospace;
+    }
+
+    .code-body {
+      background: #1e1e1e;
+      color: #e0e0e0;
+      border-radius: 0 0 8px 8px;
+      padding: 20px;
+      margin: 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
     .content {
       max-width: 1100px;
-      margin: 80px auto;
+      margin: 0 auto;
       padding: 0 20px;
     }
 
@@ -135,7 +182,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 50px;
-      margin-bottom: 100px;
+      padding: 80px 0;
     }
 
     .section-text {
@@ -143,49 +190,90 @@
     }
 
     .section h2 {
-      font-size: 36px;
-      color: white;
+      font-size: 2.5em;
+      color: #1c1e21;
       margin-bottom: 20px;
       font-weight: 700;
     }
 
     .section p {
-      color: #b0b0b0;
-      font-size: 18px;
+      color: #5c5c5c;
+      font-size: 1.15em;
       margin-bottom: 20px;
+      line-height: 1.7;
     }
 
-    .code-box {
-      background-color: #111;
+    .section a {
       color: #61dafb;
-      padding: 25px;
-      border-radius: 10px;
-      font-family: 'Courier New', monospace;
-      font-size: 14px;
-      overflow-x: auto;
-      border: 1px solid #1f1f1f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .section a:hover {
+      text-decoration: underline;
     }
 
     .phone-mockup {
       width: 220px;
       height: 420px;
-      background-color: #0f0f0f;
+      background-color: #f5f5f5;
       border-radius: 30px;
-      border: 8px solid #222;
-      box-shadow: 0 0 20px rgba(97, 218, 251, 0.2);
+      border: 8px solid #ddd;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .phones {
+      display: flex;
+      gap: 20px;
+    }
+
+    .phone {
+      width: 220px;
+      height: 450px;
+      border-radius: 30px;
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #1c1e21;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      position: relative;
+      border: 8px solid #ddd;
+    }
+
+    .phone1, .phone2 {
+      transform: none;
+      background-color: #f5f5f5;
     }
 
     .features {
-      background-color: #0f0f0f;
+      background-color: #f8f9fa;
       padding: 100px 20px;
       text-align: center;
     }
 
     .features h2 {
-      font-size: 40px;
-      color: white;
-      margin-bottom: 60px;
-      font-weight: 800;
+      font-size: 2.8em;
+      color: #1c1e21;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .features p {
+      color: #5c5c5c;
+      font-size: 1.15em;
+      margin-bottom: 40px;
+    }
+
+    .features a {
+      color: #61dafb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .features a:hover {
+      text-decoration: underline;
     }
 
     .feature-cards {
@@ -199,42 +287,148 @@
 
     .card {
       flex: 1 1 300px;
-      background: linear-gradient(145deg, #111, #181818);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(97, 218, 251, 0.1);
-      border: 1px solid #222;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: 1px solid #e8e8e8;
       text-align: left;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
+      box-shadow: 0 8px 24px rgba(97, 218, 251, 0.2);
     }
 
     .card h3 {
-      color: #61dafb;
-      font-size: 24px;
+      color: #1c1e21;
+      font-size: 1.4em;
       margin-bottom: 15px;
+      font-weight: 700;
     }
 
     .card p {
-      color: #b0b0b0;
-      font-size: 16px;
-      line-height: 1.5;
+      color: #5c5c5c;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .section-container {
+      padding: 100px 20px;
+      background: #ffffff;
+    }
+
+    .section-container h1 {
+      font-size: 2.8em;
+      color: #1c1e21;
+      margin-bottom: 60px;
+      font-weight: 700;
+    }
+
+    .section-container p {
+      color: #5c5c5c;
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .section-container a {
+      color: #61dafb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .section-container a:hover {
+      text-decoration: underline;
+    }
+
+    .icon-box {
+      width: 86px;
+      height: 86px;
+      background-color: #f0f0f0;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .icon-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .parallel-bar {
+      background: linear-gradient(180deg, #d0d0d0 70%, transparent) !important;
     }
 
     footer {
-      background-color: #111;
-      color: #888;
+      background-color: #f8f9fa;
+      color: #5c5c5c;
       text-align: center;
-      padding: 50px 20px;
-      border-top: 1px solid #1f1f1f;
+      padding: 60px 20px;
+      border-top: 1px solid #e8e8e8;
     }
 
-    footer p {
+    .footer-container {
+      background-color: #f8f9fa;
+      color: #5c5c5c;
+      padding: 50px 10%;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .footer-column h4 {
+      color: #1c1e21;
       font-size: 14px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-column a {
+      font-size: 16px;
+      margin: 12px 0;
+      color: #5c5c5c;
+      text-decoration: none;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .footer-column a:hover {
+      color: #61dafb;
+    }
+
+    .footer-logo {
+      color: #1c1e21;
+      font-weight: 700;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    .footer-copy {
+      font-size: 14px;
+      color: #888888;
     }
 
     @media (max-width: 900px) {
@@ -258,97 +452,33 @@
       .hero p {
         font-size: 18px;
       }
-    }
-    .icon-box {
-    width: 60px;
-    height: 60px;
-    background-color: #1c1c1e; 
-    border-radius: 14px;       
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); 
-    flex: 0 0 auto;           
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-    .phones {
-    display: flex;
-    gap: 20px;
-    }
 
-    .phone {
-    width: 220px;
-    height: 450px;
-    border-radius: 30px;
-    background-color: #1a1a1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #e0e0e0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-    position: relative;
-    }
-
-    .phone1 {
-    transform: translateX(20px);
-    background-color: #121212;
-    }
-
-    .phone2 {
-    transform: translateX(-20px);
-    background-color: #0f0f0f;
-    }
-    .footer-container {
-    background-color: #1e1e22;
-    color: #d1d1d1;
-    padding: 50px 10%;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    }
-    .footer-columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    text-align: left;
-    width: 100%;
-    }
-    .footer-column h4 {
-      color: #ffffff;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-    .footer-column a {
-      font-size: 18px;
-      margin: 20px 0;
-      color: #bbbbbb;
-    }
-    .footer-copy {
-      font-size: 14px;
-      color: #888888;
-    }
-    @media (max-width: 768px) {
-        .footer-columns {
+      .footer-columns {
         flex-direction: column;
         align-items: center;
-        }
-        .footer-column {
+      }
+
+      .footer-column {
         margin-bottom: 30px;
-        }
+      }
     }
+    footer .footer-column h4 {
+        color: #727784;
+      }
+      footer .footer-column a {
+        color: #fff;
+      }
   </style>
 </head>
 <body>
 
-  <nav>
+  <nav style="background-color: #191A20;">
     <div class="logo">React Native</div>
     <div class="nav-links">
-      <a href="#docs">Docs</a>
-      <a href="#learn">Learn</a>
-      <a href="#community">Community</a>
-      <a href="#blog">Blog</a>
+      <a href="#docs" style="color: #fff;">Docs</a>
+      <a href="#learn" style="color: #fff;">Learn</a>
+      <a href="#community" style="color: #fff;">Community</a>
+      <a href="#blog" style="color: #fff;">Blog</a>
     </div>
   </nav>
 
@@ -362,41 +492,38 @@
     </div>
 
     <div class="devices">
-        <div class="device laptop"></div>
-        <div class="device"></div>
-        <div class="device"></div>
-        <div class="device laptop"></div>
-      </div>
+      <div class="device laptop"></div>
+      <div class="device"></div>
+      <div class="device"></div>
+      <div class="device laptop"></div>
     </div>
+  </div>
 
-    <section class="hero-section" style="text-align: center;">
-      <h1 style="margin-left: auto; margin-right: auto;">Create native apps for Android, iOS, and more using React</h1>
-      <p class="subtitle" style="margin-left: auto; margin-right: auto; text-align: center;">
-        React Native brings the best parts of developing with React to native development.<br>
-        It's a best-in-class JavaScript library for building user interfaces.
-      </p>
-      <div style="height: 32px;"></div>
+  <section class="hero-section" style="text-align: center;">
+    <h1 style="margin-left: auto; margin-right: auto;">Create native apps for Android, iOS, and more using React</h1>
+    <p class="subtitle" style="margin-left: auto; margin-right: auto; text-align: center;">
+      React Native brings the best parts of developing with React to native development.<br>
+      It's a best-in-class JavaScript library for building user interfaces.
+    </p>
+    <div style="height: 32px;"></div>
 
-      <div class="visual-container" style="display: flex; flex-direction: row; align-items: flex-start; gap: 40px; justify-content: center;">
-        <div class="code-card" style="text-align: left;">
-          <div class="code-header">index.js</div>
-          <pre class="code-body" style="background: #18191a; color: #e0e0e0; border-radius: 8px; padding: 16px; margin: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.55); font-size: 1.05em;"><code>
-function HomeScreen() {
+    <div class="visual-container" style="display: flex; flex-direction: row; align-items: flex-start; gap: 40px; justify-content: center;">
+      <div class="code-card" style="text-align: left;">
+        <div class="code-header">index.js</div>
+        <pre class="code-body"><code>function HomeScreen() {
   return (
     &lt;View&gt;
       &lt;Text&gt; Hello World 👋🌎!&lt;/Text&gt;
     &lt;/View&gt;
   );
-}
-          </code></pre>
-        </div>
-        <div class="phones" style="display: flex; flex-direction: row; gap: 20px; align-items: flex-start;">
-          <div class="phone phone1" style="transform: none; margin-right: 0;"><span>Hello World 👋🌎!</span></div>
-          <div class="phone phone2" style="transform: none; margin-left: 0;"><span>Hello World 👋🌎!</span></div>
-        </div>
+}</code></pre>
       </div>
-    </section>
-
+      <div class="phones" style="display: flex; flex-direction: row; gap: 20px; align-items: flex-start;">
+        <div class="phone phone1" style="transform: none; margin-right: 0;"><span>Hello World 👋🌎!</span></div>
+        <div class="phone phone2" style="transform: none; margin-left: 0;"><span>Hello World 👋🌎!</span></div>
+      </div>
+    </div>
+  </section>
 
   <div class="content">
     <div class="section" style="display: flex; justify-content: center;">
@@ -418,7 +545,7 @@ function HomeScreen() {
         <h2 style="text-align: center;">Get a head start with a framework</h2>
         <p style="text-align: center;">
           React Native brings the React programming paradigm to platforms like Android and iOS. It <br>
-          doesn’t prescribe how to do routing, or how to access each of the numerous platform APIs. <br>
+          doesn't prescribe how to do routing, or how to access each of the numerous platform APIs. <br>
           To build a new app with React Native, we recommend a framework like <a href="https://expo.dev/">Expo</a>.
         </p>
         <div class="feature-cards" style="display: flex; justify-content: center; gap: 28px; margin-top: 28px; flex-wrap: wrap;">
@@ -428,11 +555,11 @@ function HomeScreen() {
           </div>
           <div class="card" style="text-align: center;">
             <h3>Use any library, SDK, or native code</h3>
-            <p>Generate native changes or write your own native code. Use over 50 modules to create your app..</p>
+            <p>Generate native changes or write your own native code. Use over 50 modules to create your app.</p>
           </div>
           <div class="card" style="text-align: center;">
             <h3>Developer tools</h3>
-            <p>Get started quickly with Expo Go, then continue with expo-dev-client: a module that adds Expo’s tools to apps that require native changes.</p>
+            <p>Get started quickly with Expo Go, then continue with expo-dev-client: a module that adds Expo's tools to apps that require native changes.</p>
           </div>
         </div>
       </div>
@@ -442,16 +569,16 @@ function HomeScreen() {
   <div class="features">
     <h2>Watch and Learn</h2>
     <p>Watch talks by the React team and learn how to get the most out of React Native. <br> Find the latest on <a href="https://bsky.app/profile/reactnative.com">Bluesky</a> and <a href="https://x.com/reactnative">X</a>.</p>
-    <div class="video-container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-        <div class="video-item" style="flex: 0 0 auto;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/0zNg_qSAGxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-        </div>
-        <div class="video-item" style="flex: 0 0 auto;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/0zNg_qSAGxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-        </div>
+    <div class="video-container">
+      <div class="video-item" style="flex: 0 0 auto;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0zNg_qSAGxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" style="flex: 0 0 auto;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0zNg_qSAGxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
-    
   </div>
+
   <section class="section-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; width: 100%;">
     <h1 style="text-align: center; font-size: 2.4em; margin-bottom: 0;">
       Meta supported. Community driven.
@@ -463,7 +590,7 @@ function HomeScreen() {
         <p>Our community is always shipping exciting new projects and exploring platforms beyond Android and iOS with repos like <a href="#">React Native Windows</a>, <a href="#">React Native macOS</a> and <a href="#">React Native Web</a>.</p>
       </div>
       <div class="parallel-bar" aria-hidden="true"
-        style="width: 2px; min-width: 2px; height: 320px; background: linear-gradient(180deg, #e0e0e0 70%, transparent); margin: 0 24px; align-self: stretch;"
+        style="width: 2px; min-width: 2px; height: 320px; background: linear-gradient(180deg, #d0d0d0 70%, transparent); margin: 0 24px; align-self: stretch;"
       ></div>
       <div class="icon-container" style="flex: 1 1 340px; min-width: 320px; max-width: 560px;">
         <p class="icon-heading">React Native is being used in thousands of apps, but it's likely you've already used it in one of these apps:</p>
@@ -475,71 +602,73 @@ function HomeScreen() {
             gap: 16px;
             justify-items: center;
             align-items: center;
+            margin-top: 20px;
           "
         >
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
-          <div class="icon-box" style="width:86px; height:86px; background:#eee; border-radius:14px; margin: 0 2px 2px 0;"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
+          <div class="icon-box"></div>
         </div>
         <p class="more-text" style="margin-top: 14px;">and <a href="#">many more.</a></p>
       </div>
     </div>
   </section>
-  <footer>
+
+  <footer style="background-color: #191A20;">
     <div class="footer-columns">
-        <div class="footer-column">
+      <div class="footer-column">
         <h4>DEVELOP</h4>
-        <a href="#">Guides</a><br>
-        <a href="#">Components</a><br>
-        <a href="#">APIs</a><br>
+        <a href="#">Guides</a>
+        <a href="#">Components</a>
+        <a href="#">APIs</a>
         <a href="#">Architecture</a>
-        </div>
-        <div class="footer-column">
+      </div>
+      <div class="footer-column">
         <h4>PARTICIPATE</h4>
-        <a href="#">Showcase</a><br>
-        <a href="#">Contributing</a><br>
-        <a href="#">Community</a><br>
-        <a href="#" target="_blank">Directory ↗</a><br>
+        <a href="#">Showcase</a>
+        <a href="#">Contributing</a>
+        <a href="#">Community</a>
+        <a href="#" target="_blank">Directory ↗</a>
         <a href="#" target="_blank">Stack Overflow ↗</a>
-        </div>
-        <div class="footer-column">
+      </div>
+      <div class="footer-column">
         <h4>FIND US</h4>
-        <a href="#">Blog</a><br>
-        <a href="#" target="_blank">X ↗</a><br>
-        <a href="#" target="_blank">Bluesky ↗</a><br>
+        <a href="#">Blog</a>
+        <a href="#" target="_blank">X ↗</a>
+        <a href="#" target="_blank">Bluesky ↗</a>
         <a href="#" target="_blank">GitHub ↗</a>
-        </div>
-        <div class="footer-column">
+      </div>
+      <div class="footer-column">
         <h4>EXPLORE MORE</h4>
-        <a href="#" target="_blank">ReactJS ↗</a><br>
-        <a href="#" target="_blank">Privacy Policy ↗</a><br>
+        <a href="#" target="_blank">ReactJS ↗</a>
+        <a href="#" target="_blank">Privacy Policy ↗</a>
         <a href="#" target="_blank">Terms of Service ↗</a>
-        </div>
-        </div>
-        <div class="footer-logo">Meta Open Source</div>
-        <div class="footer-copy">Copyright © 2025 Meta Platforms, Inc.</div>
+      </div>
+    </div>
+    <div class="footer-logo">Meta Open Source</div>
+    <div class="footer-copy">Copyright © 2025 Meta Platforms, Inc.</div>
   </footer>
 
 </body>

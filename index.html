@@ -48,7 +48,9 @@
     }
 
     .hero {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 100px 20px 80px;
       background: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
     }
@@ -93,7 +95,6 @@
       color: #61dafb;
     }
 
-
     .devices {
       display: flex;
       justify-content: center;
@@ -117,6 +118,9 @@
     }
 
     .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 100px 20px;
       background: #ffffff;
     }
@@ -137,8 +141,18 @@
     }
 
     .visual-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+      justify-content: center;
       max-width: 1200px;
       margin: 0 auto;
+    }
+
+    .code-card {
+      display: flex;
+      flex-direction: column;
     }
 
     .code-header {
@@ -162,6 +176,8 @@
     }
 
     .content {
+      display: flex;
+      flex-direction: column;
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px;
@@ -177,6 +193,8 @@
 
     .section-text {
       flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .section h2 {
@@ -232,15 +250,12 @@
       border: 8px solid #ddd;
     }
 
-    .phone1, .phone2 {
-      transform: none;
-      background-color: #f5f5f5;
-    }
-
     .features {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       background-color: #f8f9fa;
       padding: 100px 20px;
-      text-align: center;
     }
 
     .features h2 {
@@ -277,14 +292,14 @@
 
     .card {
       flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
       background: #ffffff;
       padding: 35px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       border: 1px solid #e8e8e8;
-      text-align: left;
     }
-
 
     .card h3 {
       color: #1c1e21;
@@ -308,6 +323,11 @@
     }
 
     .section-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
       padding: 100px 20px;
       background: #ffffff;
     }
@@ -336,6 +356,40 @@
       text-decoration: underline;
     }
 
+    .content-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 48px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .text-container {
+      flex: 1 1 340px;
+      min-width: 300px;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .icon-container {
+      flex: 1 1 340px;
+      min-width: 320px;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .icon-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
     .icon-box {
       width: 86px;
       height: 86px;
@@ -347,9 +401,13 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
-
     .parallel-bar {
-      background: linear-gradient(180deg, #d0d0d0 70%, transparent) !important;
+      width: 2px;
+      min-width: 2px;
+      height: 320px;
+      background: linear-gradient(180deg, #d0d0d0 70%, transparent);
+      margin: 0 24px;
+      align-self: stretch;
     }
 
     footer {
@@ -360,14 +418,6 @@
       border-top: 1px solid #e8e8e8;
     }
 
-    .footer-container {
-      background-color: #f8f9fa;
-      color: #5c5c5c;
-      padding: 50px 10%;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-
     .footer-columns {
       display: flex;
       justify-content: space-between;
@@ -375,6 +425,11 @@
       margin-bottom: 40px;
       text-align: left;
       width: 100%;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
     }
 
     .footer-column h4 {
@@ -391,9 +446,7 @@
       margin: 12px 0;
       color: #5c5c5c;
       text-decoration: none;
-      display: block;
     }
-
 
     .footer-logo {
       color: #1c1e21;
@@ -410,7 +463,14 @@
     @media (max-width: 900px) {
       .section {
         flex-direction: column;
-        text-align: center;
+      }
+
+      .visual-container {
+        flex-direction: column;
+      }
+
+      .content-row {
+        flex-direction: column;
       }
 
       .phone-mockup {
@@ -438,12 +498,14 @@
         margin-bottom: 30px;
       }
     }
+    
     footer .footer-column h4 {
-        color: #727784;
-      }
-      footer .footer-column a {
-        color: #fff;
-      }
+      color: #727784;
+    }
+    
+    footer .footer-column a {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -475,16 +537,16 @@
     </div>
   </div>
 
-  <section class="hero-section" style="text-align: center;">
-    <h1 style="margin-left: auto; margin-right: auto;">Create native apps for Android, iOS, and more using React</h1>
-    <p class="subtitle" style="margin-left: auto; margin-right: auto; text-align: center;">
+  <section class="hero-section">
+    <h1 style="text-align: center;">Create native apps for Android, iOS, and more using React</h1>
+    <p class="subtitle" style="text-align: center;">
       React Native brings the best parts of developing with React to native development.<br>
       It's a best-in-class JavaScript library for building user interfaces.
     </p>
     <div style="height: 32px;"></div>
 
-    <div class="visual-container" style="display: flex; flex-direction: row; align-items: flex-start; gap: 40px; justify-content: center;">
-      <div class="code-card" style="text-align: left;">
+    <div class="visual-container">
+      <div class="code-card">
         <div class="code-header">index.js</div>
         <pre class="code-body"><code>function HomeScreen() {
   return (
@@ -494,46 +556,46 @@
   );
 }</code></pre>
       </div>
-      <div class="phones" style="display: flex; flex-direction: row; gap: 20px; align-items: flex-start;">
-        <div class="phone phone1" style="transform: none; margin-right: 0;"><span>Hello World 👋🌎!</span></div>
-        <div class="phone phone2" style="transform: none; margin-left: 0;"><span>Hello World 👋🌎!</span></div>
+      <div class="phones">
+        <div class="phone"><span>Hello World 👋🌎!</span></div>
+        <div class="phone"><span>Hello World 👋🌎!</span></div>
       </div>
     </div>
   </section>
 
   <div class="content">
-    <div class="section" style="display: flex; justify-content: center;">
-      <div class="section-text" style="max-width: 600px; width: 100%; text-align: center; margin: 0 auto;">
+    <div class="section" style="flex-direction: column;">
+      <div class="section-text" style="max-width: 600px; text-align: center; align-items: center;">
         <h2 style="text-align: center;">Native development for everyone</h2>
         <p style="text-align: center;">
           React Native lets you create truly native apps and doesn't compromise your users' experiences. It provides a core set of platform-agnostic native components like View, Text, and Image that map directly to native UI building blocks.
         </p>
         <div style="display: flex; justify-content: center; margin-top: 20px;">
-          <div class="phones" style="display: flex; flex-direction: row; gap: 20px; align-items: flex-start; justify-content: center;">
-            <div class="phone phone1" style="transform: none; margin-right: 0;"><span>Hello World 👋🌎!</span></div>
+          <div class="phones">
+            <div class="phone"><span>Hello World 👋🌎!</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="section" style="text-align: center;">
-      <div class="section-text" style="display: inline-block; text-align: center;">
+    <div class="section" style="flex-direction: column;">
+      <div class="section-text" style="align-items: center; text-align: center;">
         <h2 style="text-align: center;">Get a head start with a framework</h2>
         <p style="text-align: center;">
           React Native brings the React programming paradigm to platforms like Android and iOS. It <br>
           doesn't prescribe how to do routing, or how to access each of the numerous platform APIs. <br>
           To build a new app with React Native, we recommend a framework like <a href="https://expo.dev/">Expo</a>.
         </p>
-        <div class="feature-cards" style="display: flex; justify-content: center; gap: 28px; margin-top: 28px; flex-wrap: wrap;">
-          <div class="card" style="text-align: center;">
+        <div class="feature-cards" style="margin-top: 28px;">
+          <div class="card" style="align-items: center; text-align: center;">
             <h3>File-based routing</h3>
             <p>Create stack, modal, drawer, and tab screens with minimal boilerplate using your filesystem.</p>
           </div>
-          <div class="card" style="text-align: center;">
+          <div class="card" style="align-items: center; text-align: center;">
             <h3>Use any library, SDK, or native code</h3>
             <p>Generate native changes or write your own native code. Use over 50 modules to create your app.</p>
           </div>
-          <div class="card" style="text-align: center;">
+          <div class="card" style="align-items: center; text-align: center;">
             <h3>Developer tools</h3>
             <p>Get started quickly with Expo Go, then continue with expo-dev-client: a module that adds Expo's tools to apps that require native changes.</p>
           </div>
@@ -546,41 +608,29 @@
     <h2>Watch and Learn</h2>
     <p>Watch talks by the React team and learn how to get the most out of React Native. <br> Find the latest on <a href="https://bsky.app/profile/reactnative.com">Bluesky</a> and <a href="https://x.com/reactnative">X</a>.</p>
     <div class="video-container">
-      <div class="video-item" style="flex: 0 0 auto;">
+      <div style="flex: 0 0 auto;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0zNg_qSAGxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <div class="video-item" style="flex: 0 0 auto;">
+      <div style="flex: 0 0 auto;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0zNg_qSAGxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
-  <section class="section-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; width: 100%;">
+  <section class="section-container">
     <h1 style="text-align: center; font-size: 2.4em; margin-bottom: 0;">
       Meta supported. Community driven.
     </h1>
-    <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 48px; width: 100%; flex-wrap: wrap;">
-      <div class="text-container" style="flex: 1 1 340px; min-width: 300px; max-width: 520px;">
+    <div class="content-row">
+      <div class="text-container">
         <p>Meta released React Native in 2015 and has been maintaining it ever since.</p>
         <p>In 2018, React Native had the <a href="#">2nd highest</a> number of contributors for any repository in GitHub. Today, React Native is supported by contributions from individuals and companies around the world including <a href="#">Callstack</a>, <a href="#">Expo</a>, <a href="#">Infinite Red</a>, <a href="#">Microsoft</a> and <a href="#">Software Mansion</a>.</p>
         <p>Our community is always shipping exciting new projects and exploring platforms beyond Android and iOS with repos like <a href="#">React Native Windows</a>, <a href="#">React Native macOS</a> and <a href="#">React Native Web</a>.</p>
       </div>
-      <div class="parallel-bar" aria-hidden="true"
-        style="width: 2px; min-width: 2px; height: 320px; background: linear-gradient(180deg, #d0d0d0 70%, transparent); margin: 0 24px; align-self: stretch;"
-      ></div>
-      <div class="icon-container" style="flex: 1 1 340px; min-width: 320px; max-width: 560px;">
-        <p class="icon-heading">React Native is being used in thousands of apps, but it's likely you've already used it in one of these apps:</p>
-        <div 
-          class="icon-grid" 
-          style="
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 16px;
-            justify-items: center;
-            align-items: center;
-            margin-top: 20px;
-          "
-        >
+      <div class="parallel-bar" aria-hidden="true"></div>
+      <div class="icon-container">
+        <p>React Native is being used in thousands of apps, but it's likely you've already used it in one of these apps:</p>
+        <div class="icon-grid">
           <div class="icon-box"></div>
           <div class="icon-box"></div>
           <div class="icon-box"></div>
@@ -607,7 +657,7 @@
           <div class="icon-box"></div>
           <div class="icon-box"></div>
         </div>
-        <p class="more-text" style="margin-top: 14px;">and <a href="#">many more.</a></p>
+        <p style="margin-top: 14px;">and <a href="#">many more.</a></p>
       </div>
     </div>
   </section>
